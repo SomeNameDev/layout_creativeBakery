@@ -1,3 +1,4 @@
+<!-- #region head -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,8 +13,73 @@
       href="src/styles/main.scss"
     />
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+
+  <!-- #endregion -->
+  <body class="page">
+    <!-- #region header -->
+    <header class="header">
+      <div class="header__top">
+        <a href="#">
+          <img
+            src="./src/icons/logo.png"
+            alt="bakery logo"
+          />
+        </a>
+        <a
+          href="#"
+          class="icon icon--menu"
+        ></a>
+      </div>
+      <h1 class="header__title title">Creative bakery</h1>
+      <p class="header_desc desc">
+        We bake your fantasies — croissants, cakes, cookies, and cupcakes.
+      </p>
+      <img
+        src="./src/images/Cookie.png"
+        alt="cookie"
+      />
+      <a
+        href="#"
+        class="header__button"
+      >
+        <span class="header__button-icon"></span>
+        <span>Learn more</span>
+      </a>
+    </header>
+
+    <!-- #endregion -->
+
+    <aside class="menu"></aside>
+
+    <!-- #region main -->
+    <main class="main">
+      <section class="what-we-bake">
+        <h2>What we bake</h2>
+        <p class="desc">
+          We can customize our cookies right for your needs. Just imagine it
+        </p>
+        <div class="what-we-bake__card"></div>
+        <div class="what-we-bake__card"></div>
+        <div class="what-we-bake__card"></div>
+        <div class="what-we-bake__card"></div>
+        <div class="what-we-bake__card"></div>
+        <div class="what-we-bake__card"></div>
+      </section>
+
+      <section class="about-us">
+        <h2>Few words About us</h2>
+        <p class="desc">
+          Like many design teams, Onfido made the transition from Abstract +
+          Sketch, to Figma in the last couple of years. One of the common
+          resistance points internally before making that switch, was Figma’s
+          lack of Git-style branching that Abstract enabled. The design team had
+          come to rely on branching and had built a lot of our processes around
+          it.
+        </p>
+      </section>
+    </main>
+    <!-- #endregion -->
+    <footer class="footer"></footer>
     <script src="src/scripts/main.js"></script>
   </body>
 </html>
