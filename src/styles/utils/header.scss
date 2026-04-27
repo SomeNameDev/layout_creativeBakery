@@ -1,9 +1,10 @@
 .page {
   background-color: $color-light-pink;
+  font-family: Inter, Arial, Helvetica, sans-serif;
 }
 .header {
   height: 100vh;
-
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +24,6 @@
   &__desc {
     text-align: center;
     margin: 32px 16px;
-    word-break: break-word;
   }
   &__button {
     box-sizing: border-box;
@@ -39,8 +39,12 @@
     padding: 20px 71px;
     text-decoration: none;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
     color: $color-orange;
     text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.02em;
     &-icon {
       width: 20px;
       height: 20px;
