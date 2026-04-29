@@ -1,0 +1,19 @@
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  &__top {
+    // width: 100%;
+
+    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.icon--close {
+  background-image: url(/src/icons/icon-close.png);
+}
