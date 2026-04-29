@@ -5,14 +5,18 @@
   top: 0;
   right: 0;
   left: 0;
+  opacity: 0;
+  pointer-events: none;
   &__top {
-    // width: 100%;
-
     padding: 20px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+}
+.menu:target {
+  opasity: 1;
+  pointer-events: all;
 }
 .icon--close {
   background-image: url(/src/icons/icon-close.png);
