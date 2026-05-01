@@ -2,6 +2,9 @@
   background-color: $color-light-pink;
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
+.page__body {
+  margin: 0;
+}
 .header {
   height: 100vh;
   box-sizing: border-box;
@@ -58,12 +61,4 @@
       background-repeat: no-repeat;
     }
   }
-}
-.icon {
-  height: 24px;
-  width: 24px;
-  display: block;
-}
-.icon--menu {
-  background-image: url(/src/icons/icon-menu.png);
 }
