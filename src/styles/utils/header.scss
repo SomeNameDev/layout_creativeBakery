@@ -1,6 +1,7 @@
 .page {
   background-color: $color-light-pink;
   font-family: Inter, Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 .page__body {
   margin: 0;
