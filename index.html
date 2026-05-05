@@ -20,6 +20,7 @@
   <!-- #endregion -->
   <body class="page__body">
     <!-- #region header -->
+
     <header class="header">
       <div class="header__top">
         <a href="#">
@@ -54,13 +55,10 @@
     <!-- #endregion -->
 
     <aside
-      class="page__menu"
+      class="page__menu menu"
       id="menu"
     >
-      <div
-        class="menu"
-        id="#menu"
-      >
+      <div class="menu__content">
         <div class="menu__top">
           <a href="#">
             <img
@@ -74,26 +72,66 @@
           ></a>
         </div>
       </div>
-      <a href="#">Home</a>
-      <a href="#products">Products</a>
-      <a href="#about-us">About Us</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact-us">Contact us</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a
+              href="#"
+              class="nav__link"
+            >
+              Home
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#products"
+              class="nav__link"
+            >
+              Products
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#about-us"
+              class="nav__link"
+            >
+              About Us
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#blog"
+              class="nav__link"
+            >
+              Blog
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#contact-us"
+              class="nav__link"
+            >
+              <span class="menu__button-icon"></span>
+              <span>Contact us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </aside>
 
     <!-- #region main -->
     <main class="main">
-      <section class="what-we-bake">
+      <section class="products">
         <h2>What we bake</h2>
         <p class="desc">
           We can customize our cookies right for your needs. Just imagine it
         </p>
-        <div class="what-we-bake__card"></div>
-        <div class="what-we-bake__card"></div>
-        <div class="what-we-bake__card"></div>
-        <div class="what-we-bake__card"></div>
-        <div class="what-we-bake__card"></div>
-        <div class="what-we-bake__card"></div>
+        <div class="products__card"></div>
+        <div class="products__card"></div>
+        <div class="products__card"></div>
+        <div class="products__card"></div>
+        <div class="products__card"></div>
+        <div class="products__card"></div>
       </section>
 
       <section class="about-us">

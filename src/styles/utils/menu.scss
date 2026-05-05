@@ -8,16 +8,47 @@
   &:target {
     opacity: 1;
     pointer-events: all;
+    z-index: 1000;
   }
 }
 .menu {
-  box-sizing: border-box;
-  height: 100vh;
-
+  // background-color: brown;
+  &__content {
+    box-sizing: border-box;
+    height: 100vh;
+  }
   &__top {
     padding: 20px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    width: 288px;
+    height: 56px;
+    border: 2px solid $color-orange;
+    border-radius: 32px;
+    padding: 20px 71px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-orange;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    &-icon {
+      width: 20px;
+      height: 20px;
+      background-image: url(/src/icons/icon-phone.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
