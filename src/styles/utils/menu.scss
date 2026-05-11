@@ -17,6 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 .menu {
   background-color: $color-light-pink;
@@ -31,7 +33,9 @@
 .nav {
   padding-inline: 16px;
   display: flex;
-  justify-content: center;
+
+  flex-direction: column;
+  align-items: center;
   &__link {
     display: flex;
     align-items: center;
@@ -49,14 +53,27 @@
     gap: 24px;
   }
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     background-image: url(/src/icons/icon-phone.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
   &__link--contact {
-    // padding: 10px 16px;
-    // border-radius: 32px;
+    display: flex;
+    // align-items: center;
+    align-self: flex-start;
+    text-transform: uppercase;
+    gap: 8px;
+    color: $color-orange;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 2%;
+  }
+  &__item {
+    &--contact {
+      align-self: flex-start;
+    }
   }
 }
