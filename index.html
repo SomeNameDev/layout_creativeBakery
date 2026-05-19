@@ -57,6 +57,7 @@
 
     <!-- #endregion -->
 
+    <!-- #region aside -->
     <aside
       class="page__menu menu"
       id="menu"
@@ -111,7 +112,7 @@
                 Blog
               </a>
             </li>
-            <li class="nav__item nav__item--contact">
+            <li class="nav__item">
               <a
                 href="#contact-us"
                 class="nav__link nav__link--contact"
@@ -124,23 +125,89 @@
         </nav>
       </div>
     </aside>
+    <!-- #endregion -->
 
     <!-- #region main -->
     <main class="main">
-      <section class="products">
-        <h2>What we bake</h2>
+      <section
+        class="products"
+        id="products"
+      >
+        <h2 class="products__title">What we bake</h2>
         <p class="desc">
           We can customize our cookies right for your needs. Just imagine it
         </p>
-        <div class="products__card"></div>
-        <div class="products__card"></div>
-        <div class="products__card"></div>
-        <div class="products__card"></div>
-        <div class="products__card"></div>
-        <div class="products__card"></div>
+        <div class="products__card card">
+          <img
+            src="/src/images/Photo1.png"
+            alt="Oatmeal cookies"
+          />
+          <h3 class="card__title">Cakes</h3>
+          <p class="desc">
+            Oatmeal cookies with golden raisins, orange zest and chocolate chips
+          </p>
+          <a href="#"></a>
+        </div>
+        <div class="products__card card">
+          <img
+            src="/src/images/Photo2.png"
+            alt="Chocolate biscuit"
+          />
+          <h3 class="card__title">Cakes</h3>
+          <p class="desc">
+            Chocolate biscuit coffee cake topped with a buttercream and powder
+          </p>
+          <a href="#"></a>
+        </div>
+        <div class="products__card card">
+          <img
+            src="/src/images/Photo3.png"
+            alt="Light croissant"
+          />
+          <h3 class="card__title">Donuts</h3>
+          <p class="desc">
+            Light multi-layered croissant strewn with cinammon and almond
+            “petals”
+          </p>
+          <a href="#"></a>
+        </div>
+        <div class="products__card card">
+          <img
+            src="/src/images/Photo4.png"
+            alt="croissant with nuts"
+          />
+          <h3 class="card__title">Donuts</h3>
+          <p class="desc">
+            Light multi-layered croissant strewn with coconut and nuts
+          </p>
+          <a href="#"></a>
+        </div>
+        <div class="products__card card">
+          <img
+            src="/src/images/Photo5.png"
+            alt="Chocolate salted caramel"
+          />
+          <h3 class="card__title">Cakes</h3>
+          <p class="desc">Chocolate salted caramel, Vanilla frutti pebbles</p>
+          <a href="#"></a>
+        </div>
+        <div class="products__card card">
+          <img
+            src="/src/images/Photo6.png"
+            alt="cookies with golden raisins"
+          />
+          <h3 class="card__title">Cookies</h3>
+          <p class="desc">
+            Oatmeal cookies with golden raisins, orange zest and chocolate chips
+          </p>
+          <a href="#"></a>
+        </div>
       </section>
 
-      <section class="about-us">
+      <section
+        class="about-us"
+        id="about-us"
+      >
         <h2>Few words About us</h2>
         <p class="desc">
           Like many design teams, Onfido made the transition from Abstract +
@@ -151,12 +218,17 @@
           it.
         </p>
       </section>
+      <section
+        class="blog"
+        id="blog"
+      ></section>
     </main>
     <!-- #endregion -->
 
+    <!-- #region footer -->
     <footer class="footer">
-      <div class="menu__content">
-        <div class="menu__top">
+      <div class="footer__container">
+        <div class="footer__logo">
           <a href="#">
             <img
               src="/src/icons/logo.png"
@@ -165,52 +237,76 @@
           </a>
         </div>
 
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
+        <div class="footer__group">
+          <h3 class="footer__subtitle">MENU</h3>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a
+                  href="#"
+                  class="footer__link"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#products"
+                  class="footer__link"
+                >
+                  Products
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#about-us"
+                  class="footer__link"
+                >
+                  About Us
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div
+          class="footer__group"
+          id="contact-us"
+        >
+          <h2 class="footer__main-title">CONTACT US</h2>
+
+          <h3 class="footer__subtitle">CALL US</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
               <a
-                href="#"
-                class="nav__link"
+                href="tel:6295550129"
+                class="footer__link"
               >
-                Home
+                (629) 555-0129
               </a>
             </li>
-            <li class="nav__item">
+            <li class="footer__item">
               <a
-                href="#products"
-                class="nav__link"
+                href="tel:6035550123"
+                class="footer__link"
               >
-                Products
-              </a>
-            </li>
-            <li class="nav__item">
-              <a
-                href="#about-us"
-                class="nav__link"
-              >
-                About Us
-              </a>
-            </li>
-            <li class="nav__item">
-              <a
-                href="#blog"
-                class="nav__link"
-              >
-                Blog
-              </a>
-            </li>
-            <li class="nav__item">
-              <a
-                href="#terms-&-privacy"
-                class="nav__link"
-              >
-                Terms & Privacy
+                (603) 555-0123
               </a>
             </li>
           </ul>
-        </nav>
+
+          <h3 class="footer__subtitle">EMAIL US</h3>
+          <a
+            href="mailto:bakerlab@example.com"
+            class="footer__link"
+          >
+            bakerlab@example.com
+          </a>
+        </div>
       </div>
     </footer>
+    <!-- #endregion -->
+
     <script src="src/scripts/main.js"></script>
   </body>
 </html>
