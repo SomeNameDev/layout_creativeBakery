@@ -2,12 +2,13 @@
   background-color: $color-light-pink;
   font-family: Inter, Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+  @include contentPaddingInline;
 }
 .page__body {
   margin: 0;
 }
 .header {
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   margin: auto;
   display: flex;

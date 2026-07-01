@@ -1,5 +1,73 @@
 .products {
+  &__card {
+    width: 100%;
+    grid-column: span 2;
+  }
   &__title {
     color: $color-orange;
+    margin-top: 64px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  &__desc {
+    margin-bottom: 56px;
+  }
+  &__article-wrap {
+    display: grid;
+    --grid-columns: 2;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    column-gap: 16px;
+
+    @include onTablet {
+      --grid-columns: 8;
+      column-gap: 24px;
+    }
+
+    @include onLaptop {
+    }
+
+    @include onDesktop {
+    }
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff0f5;
+  border-radius: 12px;
+  overflow: hidden;
+  gap: 16px;
+  padding-bottom: 24px;
+  &__title {
+    color: $color-grey;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  &__order {
+    text-decoration: none;
+    color: $color-orange;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    &::before {
+      background-image: url(/src/icons/Icon-arrow.png);
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }

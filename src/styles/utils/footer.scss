@@ -1,19 +1,29 @@
 .footer {
-  border: 2px solid rgb(0, 255, 64);
   background-color: $color-black;
+  @include contentPaddingInline;
   &__container {
+    padding-top: 61px;
   }
   &__logo {
+    margin-left: 21px;
   }
   &__group {
   }
   &__subtitle {
+    @include contentPaddingInline;
     color: $color-grey;
   }
   &__nav {
+    @include contentPaddingInline;
   }
   &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+    padding: 0;
     list-style: none;
+    gap: 24px;
   }
   &__item {
   }
@@ -23,12 +33,18 @@
   }
   &__main-title {
     color: $color-white;
+    @include contentPaddingInline;
+    margin-top: 64px;
+  }
+  &__subtitle {
+    color: $color-grey;
   }
 }
 .footer__social-block {
+  @include contentPaddingInline;
+  padding-block: 40px;
   display: flex;
   align-items: flex-start;
-  margin-top: 40px;
   color: $color-white;
   gap: 32px;
 }
