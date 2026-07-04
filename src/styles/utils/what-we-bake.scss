@@ -2,6 +2,29 @@
   &__card {
     width: 100%;
     grid-column: span 2;
+    @include onTablet {
+      grid-column: span 4;
+    }
+    @include onLaptop {
+      &:nth-child(1) {
+        grid-column: 1 / span 3;
+      }
+      &:nth-child(2) {
+        grid-column: 4 / span 3;
+      }
+      &:nth-child(3) {
+        grid-column: 3 / span 3;
+      }
+      &:nth-child(4) {
+        grid-column: 6 / span 3;
+      }
+      &:nth-child(5) {
+        grid-column: 1 / span 3;
+      }
+      &:nth-child(6) {
+        grid-column: 4 / span 3;
+      }
+    }
   }
   &__title {
     color: $color-orange;
