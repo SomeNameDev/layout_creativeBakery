@@ -1,25 +1,67 @@
 .footer {
   background-color: $color-black;
-  @include contentPaddingInline;
-  &__container {
-    padding-top: 61px;
+  @include onTablet {
+    padding: 88px 44px;
   }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include onTablet {
+      display: grid;
+      --grid-columns: 8;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      column-gap: 24px;
+    }
+  }
+  &__left {
+    grid-column: 1 / span 2;
+    @include onTablet {
+      grid-column: 1 / span 2;
+    }
+    @include onLaptop {
+    }
+    @include onDesktop {
+    }
+  }
+
+  &__right {
+    grid-column: 1 / span 2;
+    @include onTablet {
+      grid-column: 5 / span 2;
+    }
+    @include onLaptop {
+    }
+    @include onDesktop {
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__logo {
-    margin-left: 21px;
+    padding-bottom: 48px;
+    @include onTablet {
+      padding-bottom: 100px;
+    }
   }
   &__group {
   }
   &__subtitle {
-    @include contentPaddingInline;
+    // @include contentPaddingInline;
     color: $color-grey;
   }
   &__nav {
-    @include contentPaddingInline;
+    // @include contentPaddingInline;
   }
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -33,15 +75,21 @@
   }
   &__main-title {
     color: $color-white;
-    @include contentPaddingInline;
+    // @include contentPaddingInline;
     margin-top: 64px;
+    padding-bottom: 40px;
+    @include onTablet {
+      margin-top: 0;
+      font-size: 56px;
+    }
   }
   &__subtitle {
+    margin: 0;
     color: $color-grey;
   }
 }
 .footer__social-block {
-  @include contentPaddingInline;
+  // @include contentPaddingInline;
   padding-block: 40px;
   display: flex;
   align-items: flex-start;

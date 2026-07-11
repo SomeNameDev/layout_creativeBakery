@@ -8,19 +8,20 @@
   display: flex;
   flex-direction: column;
 
-  @include onTablet {
-    margin-top: 152px;
-    display: grid;
-    --grid-columns: 8;
-    grid-template-columns: repeat(var(--grid-columns), 1fr);
-    column-gap: 24px;
-  }
   @include onLaptop {
     padding-top: 178px;
   }
   @include onDesktop {
   }
-
+  &__content {
+    @include onTablet {
+      margin-top: 152px;
+      display: grid;
+      --grid-columns: 8;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      column-gap: 24px;
+    }
+  }
   &__title {
     color: $color-orange;
     @include onTablet {
@@ -34,11 +35,28 @@
   }
   &__stats-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
     background-image: url(../images/Crumbs.png);
     background-size: auto;
     background-repeat: no-repeat;
+    @include onTablet {
+      display: grid;
+      --grid-columns: 8;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      column-gap: 24px;
+    }
   }
   &__stats-item {
+    @include onTablet {
+      &:nth-child(odd) {
+        grid-column: 1 / span 3;
+      }
+
+      &:nth-child(even) {
+        grid-column: 5 / span 3;
+      }
+    }
   }
   &__number {
     display: block;
