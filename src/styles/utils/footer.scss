@@ -55,9 +55,10 @@
     display: flex;
     flex-direction: column;
     @include onTablet {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      display: grid;
+      --grid-columns: 8;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+      column-gap: 24px;
     }
   }
 
@@ -90,12 +91,16 @@
   }
   &__main-title {
     color: $color-white;
-
     margin-top: 64px;
     padding-bottom: 40px;
+
     @include onTablet {
       margin-top: 0;
       font-size: 56px;
+      max-width: 300px;
+    }
+    @include onLaptop {
+      max-width: none;
     }
   }
   &__subtitle {
@@ -109,6 +114,9 @@
   align-items: flex-start;
   color: $color-white;
   gap: 32px;
+  @include onTablet {
+    grid-column: 1 / span 4;
+  }
 }
 .footer__social-icon {
   height: 24px;
@@ -129,4 +137,8 @@
 }
 .footer__copyright {
   color: $color-grey;
+  @include onTablet {
+    grid-column: 5 / -1;
+    justify-self: end;
+  }
 }
