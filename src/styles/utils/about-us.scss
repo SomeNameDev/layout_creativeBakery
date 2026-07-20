@@ -1,17 +1,18 @@
 .about-us {
-  margin-top: 78px;
-
   column-gap: 32px;
   row-gap: 40px;
-  margin-block: 72px;
 
   display: flex;
   flex-direction: column;
+  background-image: url(../images/Crumbs.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @include onLaptop {
-    padding-top: 178px;
   }
   @include onDesktop {
+    margin-top: 178px;
   }
   &__content {
     @include onTablet {
@@ -37,9 +38,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background-image: url(../images/Crumbs.png);
-    background-size: auto;
-    background-repeat: no-repeat;
+
     @include onTablet {
       display: grid;
       --grid-columns: 8;

@@ -1,3 +1,9 @@
+.main {
+  @include onDesktop {
+    padding-bottom: 56px;
+  }
+}
+
 .products {
   &__card {
     width: 100%;
@@ -34,6 +40,10 @@
   }
   &__desc {
     margin-bottom: 56px;
+    @include onTablet {
+      margin-bottom: 80px;
+      flex-grow: 1;
+    }
   }
   &__article-wrap {
     display: grid;
@@ -43,7 +53,7 @@
 
     @include onTablet {
       --grid-columns: 8;
-      column-gap: 24px;
+      gap: 80px 24px;
     }
 
     @include onLaptop {
@@ -58,9 +68,8 @@
   flex-direction: column;
   background-color: #fff0f5;
   border-radius: 12px;
-  overflow: hidden;
   gap: 16px;
-  padding-bottom: 24px;
+
   &__title {
     color: $color-grey;
     font-family: 'Inter', sans-serif;
@@ -91,6 +100,17 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+  &__image {
+    transition: transform 300ms;
+    display: block;
+    width: 100%;
+    // transition: box-shadow 300ms;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
   }
 }

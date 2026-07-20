@@ -9,6 +9,11 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    @include onDesktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   &__contacts-wrap {
     display: flex;
@@ -123,22 +128,38 @@
   width: 24px;
   background-size: contain;
   background-repeat: no-repeat;
+  display: inline-block;
+  transition:
+    transform 0.2s ease-in-out,
+    background-image 0.2s ease-in-out;
 }
 .footer__social-icon--facebook {
-  background-image: url('/src/icons/facebook.png');
+  background-image: url('/src/icons/Icon-facebook.svg');
+  &:hover {
+    background-image: url('/src/icons/Icon-facebook-white.svg');
+    transform: translateY(-2px) scale(1.1);
+  }
 }
 
 .footer__social-icon--instagram {
-  background-image: url('/src/icons/instagram.png');
+  background-image: url('/src/icons/Icon-instagram.svg');
+  &:hover {
+    background-image: url('/src/icons/Icon-instagram-white.svg');
+    transform: translateY(-2px) scale(1.1);
+  }
 }
 
 .footer__social-icon--twitter {
-  background-image: url('/src/icons/twitter.png');
+  background-image: url('/src/icons/Icon-twitter.svg');
+  &:hover {
+    background-image: url('/src/icons/Icon-twitter-white.svg');
+    transform: translateY(-2px) scale(1.1);
+  }
 }
 .footer__copyright {
   color: $color-grey;
   @include onTablet {
     grid-column: 5 / -1;
-    justify-self: end;
+    align-self: center;
   }
 }

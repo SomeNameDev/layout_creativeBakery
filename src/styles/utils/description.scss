@@ -6,4 +6,7 @@
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #1c1a26;
+  @include onTablet {
+    flex-grow: 1;
+  }
 }
