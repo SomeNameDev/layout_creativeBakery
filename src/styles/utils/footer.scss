@@ -96,6 +96,7 @@
   }
   &__main-title {
     color: $color-white;
+    font-size: 48px;
     margin-top: 64px;
     padding-bottom: 40px;
 
@@ -111,6 +112,14 @@
   &__subtitle {
     margin: 0;
     color: $color-grey;
+    font-size: 16px;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 }
 .footer__social-block {

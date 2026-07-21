@@ -1,4 +1,5 @@
 .about-us {
+  margin-top: 72px;
   column-gap: 32px;
   row-gap: 40px;
 
@@ -25,6 +26,7 @@
   }
   &__title {
     color: $color-orange;
+    font-size: 48px;
     @include onTablet {
       grid-column: 1 / span 4;
     }

@@ -34,6 +34,7 @@
   }
   &__title {
     color: $color-orange;
+    font-size: 48px;
     margin-top: 64px;
     margin-bottom: 24px;
     text-transform: uppercase;
@@ -50,6 +51,7 @@
     --grid-columns: 2;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     column-gap: 16px;
+    row-gap: 56px;
 
     @include onTablet {
       --grid-columns: 8;
@@ -106,7 +108,6 @@
     transition: transform 300ms;
     display: block;
     width: 100%;
-    // transition: box-shadow 300ms;
 
     &:hover {
       transform: translateY(-5px) scale(1.03);
