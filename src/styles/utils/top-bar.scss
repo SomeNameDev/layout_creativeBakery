@@ -3,9 +3,54 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (min-wdth: 640px) {
+  @media (min-width: 640px) {
   }
   @include onDesktop {
-    grid-column: 1 / -1;
+    .nav--desktop {
+      .nav__list {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav__item {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav__link {
+        text-decoration: none;
+        color: #2b2b2b;
+        font-size: 16px;
+        line-height: 1.5;
+        transition: color 0.2s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &--contact {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          color: $color-orange;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+        }
+      }
+
+      .nav__icon {
+        width: 18px;
+        height: 18px;
+        background-image: url('../../icons/icon-phone.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
   }
 }

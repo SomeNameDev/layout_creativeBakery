@@ -47,14 +47,25 @@
   }
 
   &__img {
-    background-image: url(../../images/Cookie.png);
-    width: 100px;
-    height: 200px;
+    background-image: url('/src/images/Cookie.png');
+    width: 288px;
+    height: 290px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     order: 3;
+    @include onTablet {
+      width: 326px;
+      height: 328px;
+    }
+    @include onLaptop {
+      background-image: url('/src/images/Cookie-x2.png');
+      width: 544px;
+      height: 546px;
+    }
     @include onDesktop {
+      width: 584px;
+      height: 586px;
       grid-column: 1 / -1;
       grid-row: 1;
       justify-self: center;

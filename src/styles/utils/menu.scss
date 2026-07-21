@@ -2,7 +2,7 @@
   top: 0;
   right: 0;
   left: 0;
-  // @include contentPaddingInline;
+
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -15,6 +15,13 @@
     opacity: 1;
     pointer-events: all;
     transform: translateX(0);
+  }
+  @include onDesktop {
+    // opacity: 1;
+    // pointer-events: all;
+    // position: static;
+    // transform: none;
+    // transition: none;
   }
 }
 .top-bar {
@@ -33,6 +40,9 @@
     box-sizing: border-box;
     height: 100vh;
   }
+  @include onDesktop {
+    // height: auto;
+  }
 }
 
 .nav {
@@ -46,6 +56,11 @@
     list-style: none;
     gap: 24px;
   }
+  @include onDesktop {
+    // flex-direction: row;
+    // gap: 64px;
+  }
+
   &__item {
     display: flex;
 
