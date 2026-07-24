@@ -16,9 +16,8 @@
     pointer-events: all;
     transform: translateX(0);
   }
-  @include onDesktop {
-  }
 }
+
 .top-bar {
   padding: 20px 16px;
   display: flex;
@@ -89,4 +88,13 @@
     line-height: 1;
     letter-spacing: 2%;
   }
+}
+@include onDesktop {
+  .page__menu {
+    display: none;
+  }
+}
+
+.nav--desktop {
+  display: none;
 }

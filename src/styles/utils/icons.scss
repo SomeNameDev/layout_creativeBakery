@@ -11,9 +11,10 @@
 }
 .icon--menu {
   background-image: url(/src/icons/icon-menu.png);
-  // @media (min-width: 640px) {
-  //   display: none;
-  // }
+
+  @include onDesktop {
+    display: none;
+  }
 }
 .icon--close {
   background-image: url(/src/icons/icon-close.png);
