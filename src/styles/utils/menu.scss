@@ -39,7 +39,7 @@
 }
 
 .nav {
-  @include contentPaddingInline;
+  // @include contentPaddingInline;
   &__list {
     display: flex;
     flex-direction: column;
@@ -89,12 +89,22 @@
     letter-spacing: 2%;
   }
 }
-@include onDesktop {
+.nav--desktop {
+  display: none;
+}
+
+@include onLaptop {
   .page__menu {
     display: none;
   }
 }
 
-.nav--desktop {
-  display: none;
+@include onLaptop {
+  .nav--desktop {
+    display: block;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+  }
 }
