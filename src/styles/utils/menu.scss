@@ -39,7 +39,6 @@
 }
 
 .nav {
-  // @include contentPaddingInline;
   &__list {
     display: flex;
     flex-direction: column;
@@ -73,8 +72,6 @@
     background-image: url(/src/icons/icon-phone.png);
     background-size: contain;
     background-repeat: no-repeat;
-    @include onDesktop {
-    }
   }
   &__link--contact {
     display: flex;
@@ -91,12 +88,6 @@
 }
 .nav--desktop {
   display: none;
-}
-
-@include onLaptop {
-  .page__menu {
-    display: none;
-  }
 }
 
 @include onLaptop {

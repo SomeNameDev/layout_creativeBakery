@@ -11,8 +11,7 @@
 }
 .icon--menu {
   background-image: url(/src/icons/icon-menu.png);
-
-  @include onDesktop {
+  @include onLaptop {
     display: none;
   }
 }
