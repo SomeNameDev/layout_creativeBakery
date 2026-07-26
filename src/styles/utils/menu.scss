@@ -75,8 +75,7 @@
   }
   &__link--contact {
     display: flex;
-
-    align-self: flex-start;
+    align-items: center;
     text-transform: uppercase;
     gap: 8px;
     color: $color-orange;
@@ -97,5 +96,6 @@
   .nav__list {
     display: flex;
     flex-direction: row;
+    column-gap: 64px;
   }
 }

@@ -10,9 +10,8 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  @include onLaptop {
-  }
   @include onDesktop {
+    // background-image: url(../images/CrumbsX2.png);
     margin-top: 178px;
   }
   &__content {
@@ -27,10 +26,17 @@
   &__title {
     color: $color-orange;
     font-size: 48px;
+
     @include onTablet {
       grid-column: 1 / span 4;
+      font-size: 56px;
+    }
+
+    @include onLaptop {
+      font-size: 72px;
     }
   }
+
   &__desc {
     @include onTablet {
       grid-column: 5 / span 4;
