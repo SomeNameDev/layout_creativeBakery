@@ -5,22 +5,41 @@
 
   display: flex;
   flex-direction: column;
-  background-image: url(../images/Crumbs.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @include onDesktop {
-    // background-image: url(../images/CrumbsX2.png);
+  position: relative;
+  @include onTablet {
+    margin-top: 152px;
+  }
+  @include onLaptop {
     margin-top: 178px;
   }
+  &__crumbs {
+    width: 100px;
+    // height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    // top: 0;
+    // width: 65%;
+    // aspect-ratio: 718 / 673;
+    // max-width: 718px;
+    // background-color: red;
+    position: absolute;
+    background-image: url(../images/Crumbs.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include onDesktop {
+      background-image: url(../images/CrumbsX2.png);
+    }
+  }
+
   &__content {
     @include onTablet {
-      margin-top: 152px;
       display: grid;
       --grid-columns: 8;
       grid-template-columns: repeat(var(--grid-columns), 1fr);
       column-gap: 24px;
+      align-items: start;
     }
   }
   &__title {
