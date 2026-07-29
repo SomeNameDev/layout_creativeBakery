@@ -86,16 +86,13 @@
   }
 }
 .nav--desktop {
-  display: none;
+  @include onLaptop {
+    display: none;
+  }
 }
 
-@include onLaptop {
-  .nav--desktop {
-    display: block;
-  }
-  .nav__list {
-    display: flex;
-    flex-direction: row;
-    column-gap: 64px;
-  }
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 64px;
 }

@@ -1,8 +1,13 @@
 .footer {
   background-color: $color-black;
   padding: 56px 16px;
+  margin-top: 72px;
   @include onTablet {
     padding: 88px 44px;
+    margin-top: 152px;
+  }
+  @include onLaptop {
+    margin-top: 56px;
   }
 
   &__contacts {
