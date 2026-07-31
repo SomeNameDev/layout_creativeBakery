@@ -108,12 +108,19 @@
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 0.02em;
+    &:hover {
+      background-color: $color-orange;
+    }
     &-icon {
       width: 20px;
       height: 20px;
       background-image: url(/src/icons/icon-cookie.png);
       background-size: contain;
       background-repeat: no-repeat;
+      &:hover {
+        background-image: url(/src/icons//icon-cookie-white.png);
+        color: $color-white;
+      }
     }
     @include onDesktop {
       margin: 0;

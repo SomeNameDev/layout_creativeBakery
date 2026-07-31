@@ -9,4 +9,7 @@
   @include onLaptop {
     padding-inline: 36px;
   }
+  &__logo {
+    @include hover(transform, scale(1.2));
+  }
 }

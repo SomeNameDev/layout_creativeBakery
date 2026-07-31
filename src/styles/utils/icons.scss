@@ -4,6 +4,7 @@
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
+  @include hover(transform, scale(1.2));
   @media (min-width: 640px) {
     height: 32px;
     width: 32px;
