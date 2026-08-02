@@ -1,11 +1,13 @@
 .footer {
-  background-color: $color-black;
-  padding: 56px 16px;
   margin-top: 72px;
+  padding: 56px 16px;
+  background-color: $color-black;
+
   @include onTablet {
-    padding: 88px 44px;
     margin-top: 152px;
+    padding: 88px 44px;
   }
+
   @include onLaptop {
     margin-top: 56px;
   }
@@ -14,6 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+
     @include onDesktop {
       display: flex;
       flex-direction: row;
@@ -31,32 +34,40 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
     @include onTablet {
-      display: grid;
       --grid-columns: 8;
+
+      display: grid;
       grid-template-columns: repeat(var(--grid-columns), 1fr);
       column-gap: 24px;
     }
   }
   &__left {
     grid-column: 1 / span 2;
+
     @include onTablet {
       grid-column: 1 / span 2;
     }
+
     @include onLaptop {
     }
+
     @include onDesktop {
     }
   }
 
   &__right {
     grid-column: 1 / span 2;
+
     @include onTablet {
       grid-column: 5 / -2;
       row-gap: 32px;
     }
+
     @include onLaptop {
     }
+
     @include onDesktop {
     }
   }
@@ -64,9 +75,11 @@
   &__bottom {
     display: flex;
     flex-direction: column;
+
     @include onTablet {
-      display: grid;
       --grid-columns: 8;
+
+      display: grid;
       grid-template-columns: repeat(var(--grid-columns), 1fr);
       column-gap: 24px;
     }
@@ -74,6 +87,7 @@
 
   &__logo {
     padding-bottom: 48px;
+
     @include onTablet {
       padding-bottom: 100px;
     }
@@ -87,91 +101,105 @@
   &__list {
     display: flex;
     flex-direction: column;
+    gap: 16px;
     align-items: flex-start;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
-    gap: 16px;
   }
   &__item {
   }
   &__link {
-    text-decoration: none;
     color: $color-white;
+    text-decoration: none;
   }
   &__main-title {
-    color: $color-white;
-    font-size: 48px;
     margin-top: 64px;
     padding-bottom: 40px;
+    font-size: 48px;
+    color: $color-white;
 
     @include onTablet {
+      max-width: 300px;
       margin-top: 0;
       font-size: 56px;
-      max-width: 300px;
     }
+
     @include onLaptop {
       max-width: none;
     }
   }
   &__subtitle {
     margin: 0;
-    color: $color-grey;
-    font-size: 16px;
 
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
     font-weight: 500;
     font-style: normal;
     line-height: 1;
-    letter-spacing: 0.02em;
+    color: $color-grey;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
 }
+
 .footer__social-block {
-  padding-block: 40px;
   display: flex;
-  align-items: flex-start;
-  color: $color-white;
   gap: 32px;
+  align-items: flex-start;
+
+  padding-block: 40px;
+
+  color: $color-white;
+
   @include onTablet {
     grid-column: 1 / span 4;
   }
 }
+
 .footer__social-icon {
-  height: 24px;
-  width: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
   display: inline-block;
+
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
   transition:
     transform 0.2s ease-in-out,
     background-image 0.2s ease-in-out;
 }
+
 .footer__social-icon--facebook {
   background-image: url('/src/icons/Icon-facebook.svg');
   &:hover {
-    background-image: url('/src/icons/Icon-facebook-white.svg');
     transform: translateY(-2px) scale(1.1);
+    background-image: url('/src/icons/Icon-facebook-white.svg');
   }
 }
 
 .footer__social-icon--instagram {
   background-image: url('/src/icons/Icon-instagram.svg');
   &:hover {
-    background-image: url('/src/icons/Icon-instagram-white.svg');
     transform: translateY(-2px) scale(1.1);
+    background-image: url('/src/icons/Icon-instagram-white.svg');
   }
 }
 
 .footer__social-icon--twitter {
   background-image: url('/src/icons/Icon-twitter.svg');
   &:hover {
-    background-image: url('/src/icons/Icon-twitter-white.svg');
     transform: translateY(-2px) scale(1.1);
+    background-image: url('/src/icons/Icon-twitter-white.svg');
   }
 }
+
 .footer__copyright {
   color: $color-grey;
+
   @include onTablet {
     grid-column: 5 / -1;
     align-self: center;

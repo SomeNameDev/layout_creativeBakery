@@ -1,132 +1,160 @@
 .page {
-  background-color: $color-light-pink;
-  font-family: Inter, Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background-color: $color-light-pink;
 }
+
 .page__body {
   margin: 0;
 }
+
 .header {
-  min-height: 100vh;
-  box-sizing: border-box;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: auto;
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @include onDesktop {
-      padding-top: 144px;
-      display: grid;
       --grid-columns: 8;
+
+      display: grid;
       grid-template-columns: repeat(var(--grid-columns), 1fr);
-      column-gap: 24px;
-      row-gap: 24px;
+      gap: 24px;
       align-items: center;
+
+      padding-top: 144px;
     }
   }
 
   &__title {
+    order: 2;
+    font-size: 64px;
     color: $color-orange;
     text-align: center;
-    font-size: 64px;
-    order: 2;
-    @include onDesktop {
-      font-size: 100px;
 
-      text-align: center;
+    @include onDesktop {
       grid-column: 1 / -1;
       grid-row: 1;
       align-self: center;
       order: 3;
+
+      font-size: 100px;
+      text-align: center;
     }
   }
 
   &__img {
-    background-image: url('/src/images/Cookie.png');
+    order: 3;
+
     width: 288px;
     height: 290px;
-    background-size: contain;
+
+    background-image: url('/src/images/Cookie.png');
     background-repeat: no-repeat;
     background-position: center;
-    order: 3;
+    background-size: contain;
+
     @include onTablet {
       width: 326px;
       height: 328px;
     }
+
     @include onLaptop {
-      background-image: url('/src/images/Cookie-x2.png');
       width: 544px;
       height: 546px;
+      background-image: url('/src/images/Cookie-x2.png');
     }
+
     @include onDesktop {
-      width: 584px;
-      height: 586px;
       grid-column: 1 / -1;
       grid-row: 1;
-      justify-self: center;
-      align-self: center;
+      place-self: center center;
       order: 2;
+
+      width: 584px;
+      height: 586px;
     }
   }
 
   &__desc {
     order: 1;
-    text-align: center;
     margin: 32px 16px;
+    text-align: center;
+
     @include onDesktop {
-      // padding: 156px 0 32px;
-      margin: 0;
-      text-align: left;
       grid-column: 1 / 4;
       grid-row: 1;
       align-self: start;
+      // padding: 156px 0 32px;
+      margin: 0;
+
+      text-align: left;
     }
   }
 
   &__button {
-    order: 4;
-    box-sizing: border-box;
+    cursor: pointer;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 4px;
-    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    order: 4;
+
+    box-sizing: border-box;
     width: 288px;
     height: 56px;
+    margin-bottom: 40px;
     border: 2px solid $color-orange;
     border-radius: 32px;
-    padding: 20px 71px;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 500;
+
     font-size: 16px;
-    color: $color-orange;
-    text-transform: uppercase;
+    font-weight: 500;
     line-height: 1;
+    color: $color-orange;
+    text-decoration: none;
+    text-transform: uppercase;
     letter-spacing: 0.02em;
-    &:hover {
-      background-color: $color-orange;
-    }
-    &-icon {
+
+    transition: all 0.3s ease;
+
+    &::before {
+      content: '';
+
+      display: inline-block;
+
       width: 20px;
       height: 20px;
+
       background-image: url(/src/icons/icon-cookie.png);
       background-size: contain;
-      background-repeat: no-repeat;
-      &:hover {
-        background-image: url(/src/icons//icon-cookie-white.png);
-        color: $color-white;
-      }
     }
+    &:hover {
+      color: $color-white;
+      background-color: $color-orange;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:hover::before {
+      background-image: url(/src/icons/icon-cookie-white.png);
+    }
+
+    &-icon {
+    }
+
     @include onDesktop {
-      margin: 0;
       grid-column: 1 / 4;
       grid-row: 2;
       justify-self: start;
+      margin: 0;
     }
   }
 }

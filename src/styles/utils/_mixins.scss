@@ -10,11 +10,13 @@
     @content;
   }
 }
+
 @mixin onLaptop {
   @media (min-width: 1024px) {
     @content;
   }
 }
+
 @mixin onDesktop {
   @media (min-width: 1200px) {
     @content;
@@ -23,13 +25,16 @@
 
 @mixin contentPaddingInline() {
   padding-inline: 16px;
+
   @include onTablet {
     padding-inline: 44px;
   }
-  @include onLaptop() {
+
+  @include onLaptop {
     padding-inline: 44px;
   }
-  @include onDesktop() {
+
+  @include onDesktop {
     padding-inline: 124px;
   }
 }

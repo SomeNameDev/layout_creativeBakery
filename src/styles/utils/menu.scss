@@ -1,35 +1,38 @@
 .page__menu {
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 1000;
   top: 0;
   right: 0;
   left: 0;
+  transform: translateX(100%);
 
   opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: 1000;
-  transform: translateX(100%);
+
   transition:
     transform 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
   &:target {
-    opacity: 1;
     pointer-events: all;
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
 .top-bar {
-  padding: 20px 16px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-.menu {
-  background-color: $color-light-pink;
+  justify-content: space-between;
 
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 16px;
+}
+
+.menu {
   font-weight: 400;
+  background-color: $color-light-pink;
   &__content {
     box-sizing: border-box;
     height: 100vh;
@@ -40,12 +43,15 @@
   &__list {
     display: flex;
     flex-direction: column;
+    gap: 24px;
     align-items: center;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
-    gap: 24px;
   }
+
   @include onLaptop {
     .nav__list {
       display: flex;
@@ -56,57 +62,67 @@
 
   &__item {
     display: flex;
-
-    justify-content: center;
     align-items: flex-end;
+    justify-content: center;
   }
   &__link {
-    text-decoration: none;
-    color: inherit;
+    position: relative;
+
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: -0.01em;
+    color: inherit;
     text-align: center;
-    position: relative;
+    text-decoration: none;
+    letter-spacing: -0.01em;
     &::after {
       content: '';
-      display: block;
-      width: 100%;
+
       position: absolute;
-      height: 1px;
       bottom: -8px;
-      background-color: $color-black;
-      transition: transform 0.3s;
       transform: scale(0);
+
+      display: block;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $color-black;
+
+      transition: transform 0.3s;
     }
     &:hover::after {
-      transform: scale(1);
       transform-origin: left;
+      transform: scale(1);
     }
   }
 
   &__icon {
     width: 24px;
     height: 24px;
+
     background-image: url(/src/icons/icon-phone.png);
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
+
     @include hover(transform, scale(1.2));
   }
   &__link--contact {
     display: flex;
-    align-items: center;
-    text-transform: uppercase;
     gap: 8px;
-    color: $color-orange;
-    font-weight: 600;
+    align-items: center;
+
     font-size: 16px;
+    font-weight: 600;
     line-height: 1;
+    color: $color-orange;
+    text-transform: uppercase;
     letter-spacing: 2%;
   }
 }
+
 .nav--desktop {
   display: none;
+
   @include onLaptop {
     display: block;
   }

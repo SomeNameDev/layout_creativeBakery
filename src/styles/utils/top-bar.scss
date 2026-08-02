@@ -1,11 +1,14 @@
 .top-bar {
-  padding: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
   width: 100%;
+  padding: 20px;
+
   @media (min-width: 640px) {
   }
+
   @include onLaptop {
     padding-inline: 36px;
   }

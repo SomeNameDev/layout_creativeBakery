@@ -6,11 +6,13 @@
 
 .products {
   &__card {
-    width: 100%;
     grid-column: span 2;
+    width: 100%;
+
     @include onTablet {
       grid-column: span 4;
     }
+
     @include onLaptop {
       &:nth-child(1) {
         grid-column: 1 / span 3;
@@ -33,28 +35,31 @@
     }
   }
   &__title {
-    color: $color-orange;
-    font-size: 48px;
     margin-top: 64px;
     margin-bottom: 24px;
+
+    font-size: 48px;
+    color: $color-orange;
     text-transform: uppercase;
   }
   &__desc {
     margin-bottom: 56px;
+
     @include onTablet {
-      margin-bottom: 80px;
       flex-grow: 1;
+      margin-bottom: 80px;
     }
   }
   &__article-wrap {
-    display: grid;
     --grid-columns: 2;
+
+    display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    column-gap: 16px;
-    row-gap: 56px;
+    gap: 56px 16px;
 
     @include onTablet {
       --grid-columns: 8;
+
       gap: 80px 24px;
     }
 
@@ -65,49 +70,56 @@
     }
   }
 }
+
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #fff0f5;
-  border-radius: 12px;
   gap: 16px;
 
+  border-radius: 12px;
+
+  background-color: #fff0f5;
+
   &__title {
-    color: $color-grey;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
+    font-family: Inter, sans-serif;
     font-size: 16px;
+    font-weight: 500;
     line-height: 100%;
-    letter-spacing: 0.02em;
+    color: $color-grey;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
   &__order {
-    text-decoration: none;
-    color: $color-orange;
-    text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1;
-    letter-spacing: 0.02em;
     display: inline-flex;
-    align-items: center;
     gap: 4px;
+    align-items: center;
+
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: $color-orange;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
     &::before {
-      background-image: url(/src/icons/Icon-arrow.png);
       content: '';
+
       display: inline-block;
+
       width: 24px;
       height: 24px;
-      background-size: contain;
+
+      background-image: url(/src/icons/Icon-arrow.png);
       background-repeat: no-repeat;
       background-position: center;
+      background-size: contain;
     }
   }
   &__image {
-    transition: transform 300ms;
     display: block;
     width: 100%;
+    transition: transform 300ms;
 
     &:hover {
       transform: translateY(-5px) scale(1.03);
