@@ -1,11 +1,11 @@
 .footer {
   margin-top: 72px;
-  padding: 56px 16px;
+  padding-block: 56px;
   background-color: $color-black;
 
   @include on-tablet {
     margin-top: 152px;
-    padding: 88px 44px;
+    padding-block: 88px;
   }
 
   @include on-laptop {
@@ -71,10 +71,13 @@
     }
   }
   &__logo {
-    padding-bottom: 48px;
+    display: inline-block;
+    margin-bottom: 48px;
+
+    @include hover(transform, scale(1.1));
 
     @include on-tablet {
-      padding-bottom: 100px;
+      margin-bottom: 100px;
     }
   }
 
@@ -98,6 +101,8 @@
   &__link {
     color: $color-white;
     text-decoration: none;
+
+    @include hover(text-shadow, 0 0 5px rgba(255, 255, 255, 0.9));
   }
   &__main-title {
     margin-top: 64px;
