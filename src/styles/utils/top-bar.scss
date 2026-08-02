@@ -6,10 +6,7 @@
   width: 100%;
   padding: 20px;
 
-  @media (min-width: 640px) {
-  }
-
-  @include onLaptop {
+  @include on-laptop {
     padding-inline: 36px;
   }
   &__logo {

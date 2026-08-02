@@ -3,12 +3,12 @@
   padding: 56px 16px;
   background-color: $color-black;
 
-  @include onTablet {
+  @include on-tablet {
     margin-top: 152px;
     padding: 88px 44px;
   }
 
-  @include onLaptop {
+  @include on-laptop {
     margin-top: 56px;
   }
 
@@ -17,7 +17,7 @@
     flex-direction: column;
     gap: 40px;
 
-    @include onDesktop {
+    @include on-desktop {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -35,7 +35,7 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    @include onTablet {
+    @include on-tablet {
       --grid-columns: 8;
 
       display: grid;
@@ -46,37 +46,23 @@
   &__left {
     grid-column: 1 / span 2;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 1 / span 2;
     }
-
-    @include onLaptop {
-    }
-
-    @include onDesktop {
-    }
   }
-
   &__right {
     grid-column: 1 / span 2;
 
-    @include onTablet {
-      grid-column: 5 / -2;
+    @include on-tablet {
+      grid-column: 5 /-2;
       row-gap: 32px;
     }
-
-    @include onLaptop {
-    }
-
-    @include onDesktop {
-    }
   }
-
   &__bottom {
     display: flex;
     flex-direction: column;
 
-    @include onTablet {
+    @include on-tablet {
       --grid-columns: 8;
 
       display: grid;
@@ -84,11 +70,10 @@
       column-gap: 24px;
     }
   }
-
   &__logo {
     padding-bottom: 48px;
 
-    @include onTablet {
+    @include on-tablet {
       padding-bottom: 100px;
     }
   }
@@ -109,8 +94,7 @@
 
     list-style: none;
   }
-  &__item {
-  }
+
   &__link {
     color: $color-white;
     text-decoration: none;
@@ -121,13 +105,13 @@
     font-size: 48px;
     color: $color-white;
 
-    @include onTablet {
+    @include on-tablet {
       max-width: 300px;
       margin-top: 0;
       font-size: 56px;
     }
 
-    @include onLaptop {
+    @include on-laptop {
       max-width: none;
     }
   }
@@ -154,7 +138,7 @@
 
   color: $color-white;
 
-  @include onTablet {
+  @include on-tablet {
     grid-column: 1 / span 4;
   }
 }
@@ -200,7 +184,7 @@
 .footer__copyright {
   color: $color-grey;
 
-  @include onTablet {
+  @include on-tablet {
     grid-column: 5 / -1;
     align-self: center;
   }

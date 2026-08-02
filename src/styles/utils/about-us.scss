@@ -7,11 +7,11 @@
 
   margin-top: 72px;
 
-  @include onTablet {
+  @include on-tablet {
     margin-top: 152px;
   }
 
-  @include onLaptop {
+  @include on-laptop {
     margin-top: 178px;
   }
 
@@ -24,12 +24,12 @@
     background-position: center;
     background-size: cover;
 
-    @include onDesktop {
+    @include on-desktop {
       background-image: url(../images/CrumbsX2.png);
     }
   }
   &__content {
-    @include onTablet {
+    @include on-tablet {
       --grid-columns: 8;
 
       display: grid;
@@ -42,18 +42,18 @@
     font-size: 48px;
     color: $color-orange;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 1 / span 4;
       font-size: 56px;
     }
 
-    @include onLaptop {
+    @include on-laptop {
       font-size: 72px;
     }
   }
 
   &__desc {
-    @include onTablet {
+    @include on-tablet {
       grid-column: 5 / span 4;
     }
   }
@@ -62,7 +62,7 @@
     padding: 0;
     list-style: none;
 
-    @include onTablet {
+    @include on-tablet {
       --grid-columns: 8;
 
       display: grid;
@@ -70,12 +70,12 @@
       column-gap: 24px;
     }
 
-    @include onLaptop {
+    @include on-laptop {
       padding-bottom: 293px;
     }
   }
   &__stats-item {
-    @include onTablet {
+    @include on-tablet {
       &:nth-child(odd) {
         grid-column: 1 / span 3;
       }
