@@ -1,0 +1,466 @@
+<!-- #region head -->
+<!doctype html>
+<html
+  lang="en"
+  class="page"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Creative Bakery</title>
+    <link
+      rel="icon"
+      href="/layout_creativeBakery/assets/Vector-cookie-D_XRstUg.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" crossorigin href="/layout_creativeBakery/assets/index-ue5O_shg.css">
+  </head>
+
+  <!-- #endregion -->
+  <body class="page__body">
+    <!-- #region header -->
+
+    <header
+      class="header"
+      id="header"
+    >
+      <div class="top-bar">
+        <a
+          href="#"
+          class="top-bar__logo"
+        >
+          <img
+            src="data:image/png;base64,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"
+            alt="bakery logo"
+          />
+        </a>
+        <a
+          href="#menu"
+          class="icon icon--menu"
+        ></a>
+        <nav class="nav nav--desktop">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#products"
+                class="nav__link"
+              >
+                Products
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#about-us"
+                class="nav__link"
+              >
+                About Us
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#blog"
+                class="nav__link"
+              >
+                Blog
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#contact-us"
+                class="nav__link nav__link--contact"
+              >
+                <span class="nav__icon"></span>
+                <span>Contact us</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__content container">
+        <div class="header__img"></div>
+
+        <h1 class="title header__title">Creative bakery</h1>
+        <p class="header__desc desc">
+          We bake your fantasies — croissants,
+          <br />
+          cakes, cookies, and cupcakes.
+        </p>
+
+        <a
+          href="#"
+          class="header__button"
+        >
+          Learn more
+        </a>
+      </div>
+    </header>
+
+    <!-- #endregion -->
+
+    <!-- #region aside -->
+
+    <aside
+      class="page__menu menu"
+      id="menu"
+    >
+      <div class="top-bar">
+        <a
+          href="#"
+          class="top-bar__logo"
+        >
+          <img
+            src="data:image/png;base64,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"
+            alt="bakery logo"
+          />
+        </a>
+        <a
+          href="#"
+          class="icon icon--close"
+        ></a>
+      </div>
+      <div class="menu__content">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#"
+                class="nav__link"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#products"
+                class="nav__link"
+              >
+                Products
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#about-us"
+                class="nav__link"
+              >
+                About Us
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#blog"
+                class="nav__link"
+              >
+                Blog
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#contact-us"
+                class="nav__link nav__link--contact"
+              >
+                <span class="nav__icon"></span>
+                <span>Contact us</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <!-- #endregion -->
+
+    <!-- #region main -->
+    <main class="main container">
+      <section
+        class="products"
+        id="products"
+      >
+        <h2 class="products__title title">What we bake</h2>
+        <p class="products__desc desc">
+          We can customize our cookies right for your needs. Just imagine it
+        </p>
+        <div class="products__article-wrap">
+          <article class="products__card card">
+            <img
+              class="card__image"
+              src="/layout_creativeBakery/assets/Photo1-BwJ3yI1u.png"
+              alt="Oatmeal cookies"
+            />
+
+            <h3 class="card__title">Cakes</h3>
+            <p class="desc">
+              Oatmeal cookies with golden raisins, orange zest and chocolate
+              chips
+            </p>
+            <a
+              href="#"
+              class="card__order"
+            >
+              Order
+            </a>
+          </article>
+          <article class="products__card card">
+            <img
+              class="card__image"
+              src="/layout_creativeBakery/assets/Photo2-BdZMVPi_.png"
+              alt="Chocolate biscuit"
+            />
+
+            <h3 class="card__title">Cakes</h3>
+            <p class="desc">
+              Chocolate biscuit coffee cake topped with a buttercream and powder
+            </p>
+            <a
+              href="#"
+              class="card__order"
+            >
+              Order
+            </a>
+          </article>
+          <article class="products__card card">
+            <img
+              class="card__image"
+              src="/layout_creativeBakery/assets/Photo3-BIcy6Zuf.png"
+              alt="Light croissant"
+            />
+
+            <h3 class="card__title">Donuts</h3>
+            <p class="desc">
+              Light multi-layered croissant strewn with cinammon and almond
+              “petals”
+            </p>
+            <a
+              href="#"
+              class="card__order"
+            >
+              Order
+            </a>
+          </article>
+          <article class="products__card card">
+            <img
+              class="card__image"
+              src="/layout_creativeBakery/assets/Photo4-BlGw1iS_.png"
+              alt="croissant with nuts"
+            />
+
+            <h3 class="card__title">Donuts</h3>
+            <p class="desc">
+              Light multi-layered croissant strewn with coconut and nuts
+            </p>
+            <a
+              href="#"
+              class="card__order"
+            >
+              Order
+            </a>
+          </article>
+          <article class="products__card card">
+            <img
+              class="card__image"
+              src="/layout_creativeBakery/assets/Photo5-DCnis1zx.png"
+              alt="Chocolate salted caramel"
+            />
+
+            <h3 class="card__title">Cakes</h3>
+            <p class="desc">Chocolate salted caramel, Vanilla frutti pebbles</p>
+            <a
+              href="#"
+              class="card__order"
+            >
+              Order
+            </a>
+          </article>
+          <article class="products__card card">
+            <img
+              class="card__image"
+              src="/layout_creativeBakery/assets/Photo6-Dflwllp2.png"
+              alt="cookies with golden raisins"
+            />
+
+            <h3 class="card__title">Cookies</h3>
+            <p class="desc">
+              Oatmeal cookies with golden raisins, orange zest and chocolate
+              chips
+            </p>
+            <a
+              href="#"
+              class="card__order"
+            >
+              Order
+            </a>
+          </article>
+        </div>
+      </section>
+      <section
+        class="about-us"
+        id="about-us"
+      >
+        <div class="about-us__crumbs"></div>
+        <div class="about-us__content">
+          <h2 class="about-us__title title">Few words About us</h2>
+          <p class="about-us__desc desc">
+            Like many design teams, Onfido made the transition from Abstract +
+            Sketch, to Figma in the last couple of years. One of the common
+            resistance points internally before making that switch, was Figma’s
+            lack of Git-style branching that Abstract enabled. The design team
+            had come to rely on branching and had built a lot of our processes
+            around it.
+          </p>
+        </div>
+        <ul class="about-us__stats-list">
+          <li class="about-us__stats-item">
+            <span class="about-us__number">2015</span>
+            <span class="about-us__label">Foundation year</span>
+          </li>
+          <li class="about-us__stats-item about-us__stats-item--crumbs">
+            <span class="about-us__number">23</span>
+            <span class="about-us__label">Stores</span>
+          </li>
+          <li class="about-us__stats-item">
+            <span class="about-us__number">155</span>
+            <span class="about-us__label">Companies</span>
+          </li>
+          <li class="about-us__stats-item">
+            <span class="about-us__number">10k+</span>
+            <span class="about-us__label">Clients</span>
+          </li>
+        </ul>
+      </section>
+      <section
+        class="blog"
+        id="blog"
+      ></section>
+    </main>
+    <!-- #endregion -->
+
+    <!-- #region footer -->
+    <footer class="footer container">
+      <div class="footer__top">
+        <div class="footer__left">
+          <div class="footer__logo">
+            <a href="#">
+              <img
+                src="data:image/png;base64,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"
+                alt="bakery logo"
+              />
+            </a>
+          </div>
+
+          <nav class="footer__nav-wrap">
+            <h3 class="footer__subtitle">MENU</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a
+                  href="#products"
+                  class="footer__link"
+                >
+                  Products
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#about-us"
+                  class="footer__link"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#blog"
+                  class="footer__link"
+                >
+                  Blog
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="#header"
+                  class="footer__link"
+                >
+                  Terms & Privacy
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__right">
+          <h2
+            class="footer__main-title title"
+            id="contact-us"
+          >
+            CONTACT US
+          </h2>
+          <div class="footer__contacts">
+            <div class="footer__contacts-wrap">
+              <h3 class="footer__subtitle">CALL US</h3>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a
+                    href="tel:6295550129"
+                    class="footer__link"
+                  >
+                    (629) 555-0129
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="tel:6035550123"
+                    class="footer__link"
+                  >
+                    (603) 555-0123
+                  </a>
+                </li>
+                <li class="footer__item">
+                  <a
+                    href="tel:7045550127"
+                    class="footer__link"
+                  >
+                    (704) 555-0127
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__contacts-wrap footer__contacts-wrap--email">
+              <h3 class="footer__subtitle">EMAIL US</h3>
+              <a
+                href="mailto:bakerlab@example.com"
+                class="footer__link"
+              >
+                bakerlab@example.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__social-block">
+          <a
+            target="_blank"
+            class="footer__social-icon footer__social-icon--facebook"
+            href="http://www.facebook.com"
+          ></a>
+          <a
+            target="_blank"
+            class="footer__social-icon footer__social-icon--instagram"
+            href="http://www.instagram.com"
+          ></a>
+          <a
+            target="_blank"
+            class="footer__social-icon footer__social-icon--twitter"
+            href="http://www.twitter.com"
+          ></a>
+        </div>
+        <p class="footer__copyright">© Bakerlab 2022</p>
+      </div>
+    </footer>
+    <!-- #endregion -->
+
+    <script src="src/scripts/main.js"></script>
+  </body>
+</html>
